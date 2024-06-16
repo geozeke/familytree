@@ -10,10 +10,10 @@ all: help
 .PHONY: setup
 setup: ## setup project with runtime dependencies
 ifeq (,$(wildcard .init/setup))
-	@if [ ! -d "./scratch" ]; then \
+	if [ ! -d "./scratch" ]; then \
 		mkdir -p scratch; \
 	fi
-	@if [ ! -d "./data" ]; then \
+	if [ ! -d "./data" ]; then \
 		mkdir -p data/tree; \
 	fi
 	mkdir .init
