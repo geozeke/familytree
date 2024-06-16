@@ -1,0 +1,11 @@
+__pycache__/
+.git/
+.gitignore
+.init/
+.vscode/
+compose.yml
+Dockerfile
+global-gitignore.txt
+Makefile
+scratch/
+setup.cfg
