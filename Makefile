@@ -29,9 +29,9 @@ endif
 # --------------------------------------------
 
 .PHONY: reset
-reset: clean ## remove init directory
-	@echo Resetting project state
-	rm -rf .init
+reset: clean ## remove family tree data
+	@echo Removing family tree data
+	rm -rf ./data/tree/*
 
 # --------------------------------------------
 
