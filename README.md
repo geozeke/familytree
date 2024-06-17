@@ -6,7 +6,9 @@
 src="https://lh3.googleusercontent.com/d/1H04KVAA3ohH_dLXIrC0bXuJXDn3VutKc"
 alt = "Dinobox logo" width="100"/>
 
-## Self-hosting a Family Tree made with MacFamilyTree
+Self-hosting a Family Tree made with MacFamilyTree
+
+## Setup
 
 1. Start by cloning this repo onto the target server. Then run:
 
@@ -31,9 +33,10 @@ alt = "Dinobox logo" width="100"/>
     ```
 
     You'll be presented with an interactive session to enter and confirm
-    a password.
+    a password. You can use this process to create as many
+    usernames/passwords as you like.
 
-4. Move the password as follows:
+4. Move the password file as follows:
 
     ```shell
     mv htpasswd ~/familytree/data
@@ -48,3 +51,14 @@ alt = "Dinobox logo" width="100"/>
 
 6. Spin-up a docker container using the `compose.yml` file in the
    toolkit.
+
+## Updating family data
+
+When you update your family tree, start by purging the old data using:
+
+```shell
+cd ~/familytree
+make reset
+```
+
+Then start with step 5 above.
