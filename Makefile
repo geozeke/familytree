@@ -29,7 +29,7 @@ endif
 # --------------------------------------------
 
 .PHONY: reset
-reset: clean ## remove family tree data
+reset: ## remove family tree data
 	@echo Removing family tree data
 	rm -rf ./data/tree/*
 
