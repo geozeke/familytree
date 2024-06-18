@@ -1,0 +1,22 @@
+# This is a sample docker compose file. To avoid merge conflicts with
+# this repo I recommend making a copy, customizing it, and managing the
+# docker instance somewhere outside this repo.
+services:
+  tree:
+    # The generated image and associated container are both called
+    # "tree". You can choose any name you wish.
+    image: tree:latest
+    container_name: tree
+    restart: unless-stopped
+    # Map ports as desired. The port internal to the running container
+    # (80) must remain unchanged. You can choose any external port you
+    # wish
+    ports:
+      - 6980:80
+    stdin_open: true
+    tty: true
+# I'm running a custom external nextwork, but this part is optional
+networks:
+  default:
+    name: mynet
+    external: true
