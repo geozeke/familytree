@@ -61,4 +61,4 @@ cd ~/familytree
 make reset
 ```
 
-Then start with step 5 above.
+then repeat steps 2 and 5 above.
