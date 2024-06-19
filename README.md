@@ -6,7 +6,7 @@
 src="https://lh3.googleusercontent.com/d/1H04KVAA3ohH_dLXIrC0bXuJXDn3VutKc"
 alt = "Dinobox logo" width="100"/>
 
-Self-hosting a Family Tree made with [MacFamilyTree][def] in a docker
+Self-hosting a family tree made with [MacFamilyTree][def] in a docker
 container, using nginx. While these instructions apply to
 [MacFamilyTree][def], any genealogy software that can publish a complete
 website (html) of a family tree will work.
@@ -59,7 +59,8 @@ website (html) of a family tree will work.
 
 ## Updating Family Data
 
-When you update your family tree, start by purging the old data using:
+When you update your family tree and you want to publish an updated
+website, start by purging the old data using:
 
 ```shell
 cd ~/familytree
