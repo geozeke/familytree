@@ -19,10 +19,7 @@ ifeq (,$(wildcard .init/setup))
 	mkdir .init
 	touch .init/setup
 else
-	@echo "Initial setup is already complete. If you are having issues, run:"
-	@echo
-	@echo "make reset"
-	@echo "make setup"
+	@echo "Initial setup is already complete.
 	@echo
 endif
 

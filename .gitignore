@@ -156,7 +156,7 @@ cython_debug/
 #.idea/
 
 # Custom exclusions
-data/
 .init/
 .streamlit/
+data/
 scratch/
