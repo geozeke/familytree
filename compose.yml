@@ -4,9 +4,9 @@
 services:
   tree:
     # The generated image and associated container are both called
-    # "tree". You can choose any name you wish.
-    image: tree:latest
-    container_name: tree
+    # "familytree". You can choose any name you wish.
+    image: familytree:latest
+    container_name: familytree
     restart: unless-stopped
     # Map ports as desired. The port internal to the running container
     # (80) must remain unchanged. You can choose any external port you

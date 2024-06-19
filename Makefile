@@ -1,4 +1,4 @@
-IMAGE=tree
+IMAGE=familytree
 TAG=latest
 
 # --------------------------------------------

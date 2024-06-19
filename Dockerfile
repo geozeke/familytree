@@ -13,3 +13,6 @@ WORKDIR /etc/nginx
 COPY ./data/htpasswd .
 
 EXPOSE 80
+
+# Switch to the non-root user before starting the container.
+USER familytree
