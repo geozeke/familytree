@@ -7,9 +7,9 @@ src="https://lh3.googleusercontent.com/d/1H04KVAA3ohH_dLXIrC0bXuJXDn3VutKc"
 alt = "Dinobox logo" width="100"/>
 
 Self-hosting a Family Tree made with [MacFamilyTree][def] in a docker
-container, using nginx. While I'm using [MacFamilyTree][def], any
-genealogy software that can publish a complete website of a family tree
-will work.
+container, using nginx. While these instructions apply to
+[MacFamilyTree][def], any genealogy software that can publish a complete
+website (html) of a family tree will work.
 
 ## Setup
 
@@ -22,7 +22,7 @@ will work.
 
 2. Export the website of a family tree created with [MacFamilyTree][def]
    to a folder. Compress (tar) the folder containing the site and copy
-   the tar file to the target server. Un-tar it on the server, and copy
+   the tarball to the target server. Un-tar it on the server, and copy
    all the files as follows:
 
     ```zsh
@@ -72,7 +72,7 @@ then repeat steps 2, 5 and 6 above.
 
 If you're creating tarballs on macOS and un-taring them on Linux, you
 may run into an issue with extended attributes. [Here's a description of
-the issue][def2], and recommended fixes using homebrew.
+the issue][def2], with recommended fixes using homebrew.
 
 [def]: https://www.syniumsoftware.com/macfamilytree
 [def2]: https://superuser.com/questions/318809/linux-os-x-tar-incompatibility-tarballs-created-on-os-x-give-errors-when-unt
