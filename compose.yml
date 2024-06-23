@@ -2,7 +2,7 @@
 # this repo I recommend making a copy, customizing it, and managing the
 # docker instance somewhere outside this repo.
 services:
-  tree:
+  familytree:
     # The generated image and associated container are both called
     # "familytree". You can choose any name you wish.
     image: familytree:latest
