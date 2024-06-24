@@ -26,7 +26,7 @@ website (html) of a family tree will work.
    all the files as follows:
 
     ```zsh
-    cp -R <location of files>/* ~/familytree/data/tree
+    cp -R <folder containing files>/* ~/familytree/data/tree
     ```
 
 3. Generate a username and password (let's say user "zeke"):
