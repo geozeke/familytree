@@ -1,4 +1,4 @@
-IMAGE=tree
+IMAGE=familytree
 TAG=latest
 
 # --------------------------------------------
@@ -8,7 +8,7 @@ all: help
 # --------------------------------------------
 
 .PHONY: setup
-setup: ## setup project with runtime dependencies
+setup: ## setup project required directories
 ifeq (,$(wildcard .init/setup))
 	if [ ! -d "./scratch" ]; then \
 		mkdir -p scratch; \
@@ -19,10 +19,7 @@ ifeq (,$(wildcard .init/setup))
 	mkdir .init
 	touch .init/setup
 else
-	@echo "Initial setup is already complete. If you are having issues, run:"
-	@echo
-	@echo "make reset"
-	@echo "make setup"
+	@echo "Initial setup is already complete.
 	@echo
 endif
 
@@ -35,9 +32,9 @@ reset: ## remove family tree data
 
 # --------------------------------------------
 
-# Some of these may fail (hence the leading '-'), but if the build is in some
-# indeterminate state, this target attempts to cleanup anything that could be
-# laying around.
+# Some of these may fail (hence the leading '-'), but if the build is in
+# some indeterminate state, this target attempts to cleanup anything
+# that could be laying around.
 .PHONY: clean-docker
 clean-docker: ## remove docker container and image
 	-docker container stop ${IMAGE}
@@ -48,13 +45,13 @@ clean-docker: ## remove docker container and image
 # --------------------------------------------
 
 .PHONY: image
-image: clean-docker ## create a standalone docker image for the project
+image: clean-docker ## create a docker image for the family tree
 	docker buildx build -t ${IMAGE}:${TAG} --no-cache .
 
 # --------------------------------------------
 
 .PHONY: image-dev
-image-dev: ## create docker image and preserve build artifacts
+image-dev: ## create a docker image but preserve build artifacts
 	docker buildx build -t ${IMAGE}:${TAG} .
 
 # --------------------------------------------
