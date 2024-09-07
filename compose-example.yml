@@ -1,6 +1,7 @@
-# This is a sample docker compose file. To avoid merge conflicts with
-# this repo I recommend making a copy, customizing it, and managing the
-# docker instance somewhere outside this repo.
+# This is a sample docker compose file. When you're ready to deploy,
+# copy and rename it to compose.yml (which is not under version
+# control). You can then safely tailor it and not run into merge
+# conflicts.
 services:
   familytree:
     # The generated image and associated container are both called
@@ -12,7 +13,7 @@ services:
     # (80) must remain unchanged. You can choose any external port you
     # wish
     ports:
-      - 6980:80
+      - 80:80
     stdin_open: true
     tty: true
 # I'm running a custom external nextwork, but this part is optional

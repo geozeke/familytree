@@ -54,8 +54,8 @@ website (html) of a family tree will work.
     ```
 
 6. Spin-up a docker container using the `compose.yml` file in this repo
-   as an example. *See the notes in the `compose.yml` file for more
-   details.*
+   as an example. *See the notes in the `compose-example.yml` file for
+   more details.*
 
 ## Updating Family Data
 
