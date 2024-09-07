@@ -37,10 +37,9 @@ reset: ## remove family tree data
 # that could be laying around.
 .PHONY: clean-docker
 clean-docker: ## remove docker container and image
-	-docker container stop ${IMAGE}
-	-docker container rm ${IMAGE}
+	-docker container stop ${IMAGE} > /dev/null 2>&1
+	-docker container rm ${IMAGE} > /dev/null 2>&1
 	-docker image rm ${IMAGE}:${TAG}
-	docker image prune -f
 
 # --------------------------------------------
 
