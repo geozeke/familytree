@@ -45,7 +45,7 @@ clean-docker: ## remove docker container and image
 
 .PHONY: image
 image: clean-docker ## create a docker image for the family tree
-	docker buildx build -t ${IMAGE}:${TAG} --no-cache .
+	docker buildx build -t ${IMAGE}:${TAG} --no-cache --pull .
 
 # --------------------------------------------
 
