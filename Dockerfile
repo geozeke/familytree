@@ -1,4 +1,4 @@
-ARG BASE=nginx:latest
+ARG BASE=nginxinc/nginx-unprivileged:latest
 
 # Base image --------------------------------------------------------
 
