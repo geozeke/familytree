@@ -15,7 +15,7 @@ website (html) of a family tree will work.
 
 1. Start by cloning this repo onto the target server. Then run:
 
-    ```shell
+    ```text
     cd familytree
     make setup
     ```
@@ -31,7 +31,7 @@ website (html) of a family tree will work.
 
 3. Generate a username and password (let's say user "zeke"):
 
-    ```shell
+    ```text
     echo -n 'zeke:' >> htpasswd
     openssl passwd -apr1 >> htpasswd
     ```
@@ -42,27 +42,27 @@ website (html) of a family tree will work.
 
 4. Move the password file into position as follows:
 
-    ```shell
+    ```text
     mv htpasswd ~/familytree/data
     ```
 
 5. Make the image:
 
-    ```shell
+    ```text
     cd ~/familytree
     make image
     ```
 
 6. Spin-up a docker container using the `compose.yml` file in this repo
-   as an example. *See the notes in the `compose-example.yml` file for
-   more details.*
+   as an example. _See the notes in the `compose-example.yml` file for
+   more details._
 
 ## Updating Family Data
 
 When you update your family tree and you want to publish an updated
 website, start by purging the old data using:
 
-```shell
+```text
 cd ~/familytree
 make reset
 ```
