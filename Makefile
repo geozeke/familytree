@@ -10,13 +10,7 @@ all: help
 .PHONY: setup
 setup: ## setup project required directories
 ifeq (,$(wildcard .init/setup))
-	@if [ ! -d "./scratch" ]; then \
-		mkdir -p scratch; \
-	fi
-	@if [ ! -d "./data" ]; then \
-		mkdir -p data/tree; \
-	fi
-	mkdir .init
+	mkdir -p scratch data/tree .init
 	touch .init/setup
 else
 	@echo "Initial setup is already complete.
@@ -57,7 +51,9 @@ image-dev: ## create a docker image but preserve build artifacts
 
 .PHONY: help
 help: ## show help
-	@echo Please specify a target. Choices are:
+	@echo ""
+	@echo "🚀 Available Commands 🚀"
+	@echo "========================"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk \
 	'BEGIN {FS = ":.*?## "}; \
-	{printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	{printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
