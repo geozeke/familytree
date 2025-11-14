@@ -96,5 +96,7 @@ If you're creating tarballs on macOS and un-taring them on Linux, you
 may run into an issue with extended attributes. [Here's a description of
 the issue][def2], with recommended fixes using homebrew.
 
+<!--------------------------------------------------------------------->
+
 [def]: https://www.syniumsoftware.com/macfamilytree
 [def2]: https://superuser.com/questions/318809/linux-os-x-tar-incompatibility-tarballs-created-on-os-x-give-errors-when-unt
