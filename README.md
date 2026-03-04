@@ -19,7 +19,7 @@ Start by cloning this repo onto the target server. Then run:
 
 ```text
 cd familytree
-make setup
+just setup
 ```
 
 ### Export the website
@@ -65,7 +65,7 @@ mv htpasswd ~/familytree/data
 
 ```text
 cd ~/familytree
-make image
+just image
 ```
 
 ### Start the container
@@ -81,7 +81,7 @@ website, start by purging the old data using:
 
 ```text
 cd ~/familytree
-make reset
+just reset
 ```
 
 then:
