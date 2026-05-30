@@ -17,7 +17,7 @@ setup:
         cp templates/Dockerfile-template Dockerfile
         cp templates/default-template.conf default.conf
     else
-        echo "Initial setup is already complete.
+        echo "Initial setup is already complete."
         echo
     fi
 
