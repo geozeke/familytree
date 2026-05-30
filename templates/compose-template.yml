@@ -1,8 +1,7 @@
 # This is a sample docker compose file. When you're ready to deploy,
-# copy and rename it to compose.yml (which is not under version
-# control). You can then safely tailor it and not run into merge
-# conflicts.
+# tailor it to your needs before running "docker compose".
 services:
+
   familytree:
     # The generated image and associated container are both called
     # "familytree". You can choose any name you wish.
@@ -16,7 +15,8 @@ services:
       - 80:80
     stdin_open: true
     tty: true
-# I'm running a custom external nextwork, but this part is optional
+
+# You can run custom networks, if desired.
 networks:
   default:
     name: mynet

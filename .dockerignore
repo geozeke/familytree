@@ -5,6 +5,6 @@
 compose.yml
 Dockerfile
 global-gitignore.txt
-Makefile
+justfile
 scratch/
-setup.cfg
+default.conf

@@ -13,7 +13,7 @@ website (html) of a family tree will work.
 
 ## Steps
 
-### Clone the repo
+## 1. Clone the repo
 
 Start by cloning this repo onto the target server. Then run:
 
@@ -22,7 +22,7 @@ cd familytree
 just setup
 ```
 
-### Export the website
+## 2. Export the Website
 
 Export the website of a family tree created with [MacFamilyTree][def] to
 a folder. Compress (tar) the folder containing the site and copy the
@@ -33,7 +33,11 @@ files as follows:
 cp -R <folder containing files>/* ~/familytree/data/tree
 ```
 
-### Generate a username and password
+## 3. (Optional) Generate a Username and Password
+
+The family tree website can be configure to run open, or with usernames
+and passwords. You can also run it behind a SSO instance, like
+[Authentik](https://docs.goauthentik.io).
 
 From your home directory, generate a username and password (let's say
 user "zeke"). First change to your home directory:
@@ -61,20 +65,36 @@ Move the password file into position as follows:
 mv htpasswd ~/familytree/data
 ```
 
-### Make the docker image
+### Adjust the Files for Password Access
+
+Inside `default.conf`, uncomment these lines:
+
+```text
+# auth_basic "Restricted Content";
+# auth_basic_user_file /etc/nginx/htpasswd;
+```
+
+Inside `Dockerfile`, uncomment these lines:
+
+```text
+# USER root
+# COPY ./data/htpasswd /etc/nginx/htpasswd
+# RUN chown nginx:nginx /etc/nginx/htpasswd && chmod 644 /etc/nginx/htpasswd
+```
+
+## 4. Make the Docker Image
 
 ```text
 cd ~/familytree
 just image
 ```
 
-### Start the container
+## 5. Start the container
 
-Spin-up a docker container using a copy of the `compose-example.yml`
-file in this repo. _See the notes in the `compose-example.yml` file for
+Spin-up a docker container. _See the notes in the `compose.yml` file for
 more details._
 
-## Updating Family Data
+## 6. Updating Family Data
 
 When you update your family tree and you want to publish an updated
 website, start by purging the old data using:
