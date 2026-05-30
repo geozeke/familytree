@@ -16,6 +16,7 @@ setup:
         cp templates/compose-template.yml compose.yml
         cp templates/Dockerfile-template Dockerfile
         cp templates/default-template.conf default.conf
+        echo "Setup complete"
     else
         echo "Initial setup is already complete."
         echo

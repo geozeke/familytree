@@ -7,4 +7,3 @@ Dockerfile
 global-gitignore.txt
 justfile
 scratch/
-default.conf
